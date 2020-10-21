@@ -8,6 +8,7 @@ function App() {
 
   const handleChange = ()=>{
    // https://api.generated.photos/api/v1/faces?api_key=YOUR_API_KEY  , you should get your api key from generated photo and paste the link.
+   //than it will be work.
     axios.get("https://api.generated.photos/api/v1/faces?api_key=YOUR_API_KEY&order_by=random").then(res =>{
       const uri = res.data.faces[0].urls[4][512]
       uri && setImage(uri)
